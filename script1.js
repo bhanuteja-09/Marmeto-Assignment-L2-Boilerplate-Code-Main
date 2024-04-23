@@ -53,7 +53,7 @@ async function fetchData(url) {
     // Fetch data from the API
     const apiUrl = 'https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json';
     const data = await fetchData(apiUrl);
-    
+  
     // If data is null or categories array doesn't exist, show error
     if (!data || !data.categories || !Array.isArray(data.categories)) {
       console.log('Invalid API data format');
