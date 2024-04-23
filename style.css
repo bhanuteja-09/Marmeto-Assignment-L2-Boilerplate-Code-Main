@@ -18,12 +18,13 @@ body {
   width: 70%;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 0px;
   margin-bottom: 20px;
   background-color: #f0f0f0;
   padding: 0px;
   border-radius: 5px;
   position: relative;
+   border-bottom: 1px solid #ccc; /* Add border line at the bottom of tabs */
 }
 
 .tab {
@@ -123,14 +124,19 @@ body {
 }
 
 .product-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: white;
-  color: black;
-  font-size: 14px; /* Increased font size */
+  width: 50%; /* Set width to cover half of the card */
+  height: 30px; /* Set fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* White background */
+  color: black; /* Black font color */
+  font-size: 12px;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 5px; /* Adjusted border-radius for curved corners */
+  position: absolute;
+  top: 5px; /* Adjusted top position */
+  left: 5px; /* Adjusted left position */
 }
 
 .add-to-cart {
@@ -148,3 +154,4 @@ body {
 .add-to-cart:hover {
   background-color: #333;
 }
+
