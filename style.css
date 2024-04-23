@@ -209,4 +209,9 @@ h1 {
   color: red;
 }
 
+/* Target the first product card image in the "Men" section */
+.tab.active[data-category="Men"] + .product-cards .product-card:first-child .product-image {
+  height: 200px; /* Adjust the height as needed */
+}
+
 

@@ -35,7 +35,10 @@ async function fetchData(url) {
     <div class="product-info">
       <div class="product-title-vendor">
         <h3 class="product-title">${product.title}</h3>
+       
         <p class="product-vendor">${product.vendor}</p>
+    
+
       </div>
       <div class="product-prices">
         <p class="product-price"><strong>Rs ${price.toFixed(2)}</strong> <strike>Rs ${comparePrice.toFixed(2)}</strike> <span class="discount">50% Off</span></p>
