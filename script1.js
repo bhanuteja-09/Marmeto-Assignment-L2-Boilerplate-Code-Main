@@ -15,30 +15,45 @@ async function fetchData(url) {
 
 // Function to render product cards
 function renderProducts(products) {
-  const productCardsContainer = document.querySelector('.product-cards');
-  productCardsContainer.innerHTML = '';
-  products.forEach(product => {
-    const card = `
-      <div class="product-card">
-        <img src="${product.image}" alt="${product.title}" class="product-image">
-        <div class="product-info">
-          <div class="product-title-vendor">
-            <h3 class="product-title">${product.title}</h3>
-            <p class="product-vendor">${product.vendor}</p>
+    const productCardsContainer = document.querySelector('.product-cards');
+    productCardsContainer.innerHTML = '';
+    products.forEach(product => {
+      const price = parseFloat(product.price) || 0;
+      const comparePrice = parseFloat(product.compare_at_price) || 0;
+      const priceText = `Rs ${price.toFixed(2)}`;
+      
+      let compareText = '';
+      if (comparePrice > 0 && comparePrice > price) {
+        compareText = `Rs ${price.toFixed(2)} <strike> ${comparePrice.toFixed(2)}</strike> 50% Off`;
+      } else {
+        compareText = `${priceText}`;
+      }
+  
+      const card = `
+        <div class="product-card">
+          <img src="${product.image}" alt="${product.title}" class="product-image">
+          <div class="product-info">
+            <div class="product-title-vendor">
+              <h3 class="product-title">${product.title}</h3>
+              <p class="product-vendor">${product.vendor}</p>
+            </div>
+            <div class="product-prices">
+              <p class="product-price">${compareText}</p>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+            ${product.badge_text ? `<span class="product-badge">${product.badge_text}</span>` : ''}
           </div>
-          <div class="product-prices">
-            <p class="product-price">$${product.price}</p>
-            <p class="product-compare-price">$${product.compare_at_price}</p>
-          </div>
-          <button class="add-to-cart">Add to Cart</button>
-          ${product.badge_text ? `<span class="product-badge">${product.badge_text}</span>` : ''}
         </div>
-      </div>
-    `;
-    productCardsContainer.innerHTML += card;
-  });
-}
-
+      `;
+      productCardsContainer.innerHTML += card;
+    });
+  }
+  
+  
+  
+  
+  
+  
 document.addEventListener("DOMContentLoaded", async function () {
   // Fetch data from the API
   const apiUrl = 'https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json';
