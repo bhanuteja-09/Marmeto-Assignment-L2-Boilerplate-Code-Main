@@ -15,7 +15,7 @@ body {
 }
 
 .tabs {
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -62,15 +62,17 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-around;
+  border-top: 1px solid #ccc; /* Add border line between rows */
+  padding-top: 20px; /* Add some space above the first row */
 }
 
 .product-card {
+  position: relative;
   flex: 1 1 calc(25% - 20px);
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  position: relative;
 }
 
 .product-image {
@@ -83,11 +85,28 @@ body {
   padding: 15px;
 }
 
+.product-title-vendor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .product-title {
   font-size: 16px;
   margin: 0;
 }
 
+.product-vendor {
+  font-size: 14px;
+  color: #666;
+  position: relative;
+}
+
+.product-vendor::before {
+  content: '•'; /* Dot character */
+  margin-right: 5px; /* Space between dot and text */
+  font-weight: bold; /* Make the dot bold */
+}
 .product-price {
   font-size: 14px;
   margin: 5px 0;
@@ -95,35 +114,35 @@ body {
 }
 
 .product-compare-price {
-  font-size: 12px;
+  font-size: 14px;
+  margin: 5px 0;
   color: #999;
   text-decoration: line-through;
-  margin: 3px 0;
+}
+
+.product-discount {
+  font-size: 12px;
+  color: #008000; /* Green color for discount */
 }
 
 .product-badge {
-  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
   background-color: white;
   color: black;
-  font-size: 16px; /* Updated font size */
-  padding: 5px 10px;
+  font-size: 14px; /* Increased font size */
+  padding: 8px; /* Increased padding */
   border-radius: 5px;
-  position: absolute;
-  top: 10px; /* Adjusted top position */
-  left: 10px; /* Adjusted left position */
-  z-index: 1;
 }
 
-
-
-/* Style for "Add to Cart" button */
 .add-to-cart {
   width: 100%;
   background-color: black;
   color: white;
   padding: 15px;
   border: none;
-  border-radius: 5px; /* Updated border radius */
+  border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   box-sizing: border-box;
