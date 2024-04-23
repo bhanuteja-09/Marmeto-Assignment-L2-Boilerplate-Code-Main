@@ -27,6 +27,7 @@ async function fetchData(url) {
             ${product.compare_at_price ? `<p class="product-compare-price">$${product.compare_at_price}</p>` : ''}
             ${product.badge_text ? `<span class="product-badge">${product.badge_text}</span>` : ''}
           </div>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       `;
       productCardsContainer.innerHTML += card;
@@ -37,7 +38,7 @@ async function fetchData(url) {
     // Fetch data from the API
     const apiUrl = 'https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json';
     const data = await fetchData(apiUrl);
-    
+  
     // If data is null or categories array doesn't exist, show error
     if (!data || !data.categories || !Array.isArray(data.categories)) {
       console.log('Invalid API data format');
@@ -81,6 +82,14 @@ async function fetchData(url) {
         // Render products based on the selected category
         renderProductsByCategory(category);
       });
+    });
+  
+    // Event listener for "Add to Cart" buttons
+    document.addEventListener('click', function (event) {
+      if (event.target.classList.contains('add-to-cart')) {
+        const productTitle = event.target.parentElement.querySelector('.product-title').textContent;
+        alert(`Added "${productTitle}" to cart! (This is a placeholder action)`);
+      }
     });
   });
   
