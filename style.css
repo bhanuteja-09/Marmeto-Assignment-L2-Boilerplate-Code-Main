@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1025px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -14,21 +14,23 @@ body {
   align-items: center;
 }
 
-.tabs {
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-  gap: 0px;
+h1 {
   margin-bottom: 20px;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 0px;
   background-color: #f0f0f0;
   padding: 0px;
   border-radius: 5px;
-  position: relative;
-   border-bottom: 1px solid #ccc; /* Add border line at the bottom of tabs */
+  border-bottom: 1px solid #ccc;
 }
 
 .tab {
-  flex: 1 1 calc(33% - 20px); /* Equal width for each tab */
+  flex: 1 1 30%;
   font-size: 18px;
   text-decoration: none;
   color: #333;
@@ -36,6 +38,7 @@ body {
   text-align: center;
   transition: background-color 0.3s ease;
   position: relative;
+  cursor: pointer;
 }
 
 .tab.active {
@@ -63,8 +66,8 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-around;
-  border-top: 1px solid #ccc; /* Add border line between rows */
-  padding-top: 20px; /* Add some space above the first row */
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
 }
 
 .product-card {
@@ -101,11 +104,11 @@ body {
   font-size: 14px;
   color: #666;
   display: flex;
-  align-items: center; /* Align vendor text and dot vertically */
+  align-items: center;
 }
 
 .product-vendor::before {
-  content: '•'; /* Bullet dot */
+  content: '•';
   font-weight: bold;
   margin-right: 5px;
 }
@@ -124,19 +127,19 @@ body {
 }
 
 .product-badge {
-  width: 50%; /* Set width to cover half of the card */
-  height: 30px; /* Set fixed height */
+  width: 50%;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white; /* White background */
-  color: black; /* Black font color */
+  background-color: white;
+  color: black;
   font-size: 12px;
   padding: 5px;
-  border-radius: 5px; /* Adjusted border-radius for curved corners */
+  border-radius: 5px;
   position: absolute;
-  top: 5px; /* Adjusted top position */
-  left: 5px; /* Adjusted left position */
+  top: 5px;
+  left: 5px;
 }
 
 .add-to-cart {
@@ -154,4 +157,3 @@ body {
 .add-to-cart:hover {
   background-color: #333;
 }
-
