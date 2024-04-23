@@ -70,6 +70,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  position: relative;
 }
 
 .product-image {
@@ -102,13 +103,18 @@ body {
 
 .product-badge {
   display: inline-block;
-  background-color: #f44336;
-  color: #fff;
-  font-size: 12px;
-  padding: 5px;
+  background-color: white;
+  color: black;
+  font-size: 16px; /* Updated font size */
+  padding: 5px 10px;
   border-radius: 5px;
-  margin-top: 5px;
+  position: absolute;
+  top: 10px; /* Adjusted top position */
+  left: 10px; /* Adjusted left position */
+  z-index: 1;
 }
+
+
 
 /* Style for "Add to Cart" button */
 .add-to-cart {
@@ -126,4 +132,3 @@ body {
 .add-to-cart:hover {
   background-color: #333;
 }
-
