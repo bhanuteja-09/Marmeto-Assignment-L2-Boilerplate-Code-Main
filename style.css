@@ -84,7 +84,7 @@ h1 {
 .product-image {
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
 }
 
 .product-info {
@@ -154,7 +154,7 @@ h1 {
   color: white;
   padding: 10px; /* Updated padding */
   border: none;
-  border-radius: 0; /* No border radius */
+  border-radius: 5px; /* No border radius */
   font-size: 16px;
   cursor: pointer;
   box-sizing: border-box;
@@ -204,4 +204,9 @@ h1 {
     flex: 1 1 calc(25% - 20px);
   }
 }
+
+.discount {
+  color: red;
+}
+
 
