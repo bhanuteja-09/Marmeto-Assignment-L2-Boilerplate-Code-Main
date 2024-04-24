@@ -51,6 +51,7 @@ async function fetchData(url) {
       productCardsContainer.innerHTML += card;
     });
   }
+
   
   document.addEventListener("DOMContentLoaded", async function () {
     // Fetch data from the API

@@ -15,8 +15,16 @@ body {
 }
 
 h1 {
-  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  background-color:white;
+  color:black;
+  padding: 10px;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for the heading */
 }
+
 
 .tabs {
   width: 100%;
@@ -82,10 +90,16 @@ h1 {
 }
 
 .product-image {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
+    width: 100%;
+    height: 85%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 5px;
+  }
+  
+  /* For the first image in the men's category */
+  .product-card:first-child .product-image {
+    height: 85%; /* Adjust height to match other images */
+  }
 
 .product-info {
   padding: 0; /* Updated padding */
@@ -146,6 +160,7 @@ h1 {
   position: absolute;
   top: 5px;
   left: 5px;
+  font-weight: bold; /* Added font-weight bold */
 }
 
 .add-to-cart {
@@ -215,5 +230,17 @@ h1 {
 } */
 
 
+/* Make emojis grayscale */
+/* .tab.active::before,
+.tab::before {
+  content: attr(data-emoji);
+  display: inline-block;
+  filter: grayscale(100%);
+  margin-right: 5px;
+} */
 
-
+.tab span.emoji {
+  font-size: 20px;
+  filter: grayscale(100%);
+  margin-right: 5px;
+}
