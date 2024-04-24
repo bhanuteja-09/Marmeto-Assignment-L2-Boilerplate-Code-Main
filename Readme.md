@@ -35,9 +35,14 @@ Running the Project:
 
 To view the project:
 
-Clone the repository using Git or download it as a ZIP file.
-Open the index.html file in your preferred browser.
-Explore the different category tabs and the corresponding product cards.
+1.Clone the repository using Git or download it as a ZIP file.
+
+https://github.com/bhanuteja-09/Marmeto-Assignment-L2-Category-Tabs.git
+
+
+2.Open the index.html file in your preferred browser.
+
+3.Explore the different category tabs and the corresponding product cards.
 
 Submission Details:
 
