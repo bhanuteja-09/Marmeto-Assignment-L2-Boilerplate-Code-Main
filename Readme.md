@@ -37,7 +37,7 @@ To view the project:
 
 1.Clone the repository using Git or download it as a ZIP file.
 
-https://github.com/bhanuteja-09/Marmeto-Assignment-L2-Category-Tabs.git
+https://github.com/bhanuteja-09/Marmeto-Assignment-L2-Boilerplate-Code-Main.git
 
 
 2.Open the index.html file in your preferred browser.
