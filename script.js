@@ -1,254 +1,106 @@
-
-const productData = {
-    "categories": [
-        {
-            "category_name": "Men",
-            "category_products": [
-                {
-                    "id": "1",
-                    "title": "Mens Kurta",
-                    "price": "1199",
-                    "compare_at_price": "1299",
-                    "vendor": "Manyvar",
-                    "badge_text": "Wedding Special",
-                    "image": "https://plus.unsplash.com/premium_photo-1682090786689-741d60a11384",
-                    "second_image": "https://plus.unsplash.com/premium_photo-1682090781379-4d177df45267"
-                },
-                {
-                    "id": "2",
-                    "title": "RCB Tshirt",
-                    "price": "2199",
-                    "compare_at_price": "4299",
-                    "vendor": "Puma",
-                    "badge_text": null,
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/22462330/2023/3/22/27a1d087-dc81-46a0-9b86-505f6491b5931679431326265RoyalChallengersBangalore2023MensReplicaJersey1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/22462330/2023/3/22/e0ac3f07-f869-4d36-a8fa-47bab62c579e1679431326230RoyalChallengersBangalore2023MensReplicaJersey3.jpg"
-                },
-                {
-                    "id": "3",
-                    "title": "Green Charm",
-                    "price": "1399",
-                    "compare_at_price": "1499",
-                    "vendor": "Myntra",
-                    "badge_text": "On offer",
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/22372642/2023/3/16/52d27507-a870-456b-addd-e62aefa0f79a1678911375020ESSLogoRegularFitMensT-Shirt1.jpg",
-                    "second_image": "empty"
-                },
-                {
-                    "id": "4",
-                    "title": "Mens Tshirt",
-                    "price": "599",
-                    "compare_at_price": "799",
-                    "vendor": "Myntra",
-                    "badge_text": "New season",
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/24055686/2023/7/26/215a939a-b567-4110-9a2b-33d0e191d5c61690363492956-Ess-Multicolor-Mens-T-shirt-971690363492544-1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/24055686/2023/7/26/51b94b0f-b2f1-4f40-a976-0a9b3110114c1690363492943-Ess-Multicolor-Mens-T-shirt-971690363492544-2.jpg"
-                }
-            ]
-        },
-        {
-            "category_name": "Women",
-            "category_products": [
-                {
-                    "id": "1w",
-                    "title": "Women Kurti",
-                    "price": "1199",
-                    "compare_at_price": "1299",
-                    "vendor": "Manyvar",
-                    "badge_text": "New season",
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/24538028/2023/8/25/cb1a5027-184f-4c8a-a96b-154987ff47f31692955360626-HERENOW-Women-Kurtis-1661692955360126-1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/24538028/2023/8/25/3c5fdff6-e41a-4bbe-9539-11c9ea6a1c8f1692955360564-HERENOW-Women-Kurtis-1661692955360126-3.jpg"
-                },
-                {
-                    "id": "2w",
-                    "title": "Yellow casual dress",
-                    "price": "199",
-                    "compare_at_price": "299",
-                    "vendor": "Myntra",
-                    "badge_text": null,
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/19276232/2022/8/8/55497e43-260c-4a3f-865b-059d9edd861a1659942435451-Women-Yellow-Cotton-Mandarin-Collar-Top-3841659942434972-1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/19276232/2022/8/8/c8c6a172-cd4d-4637-9078-2e791cd7dbfe1659942435386-Women-Yellow-Cotton-Mandarin-Collar-Top-3841659942434972-4.jpg"
-                },
-                {
-                    "id": "3w",
-                    "title": "Women Black & Golden A-Line Kurti",
-                    "price": "1399",
-                    "compare_at_price": "1499",
-                    "vendor": "Myntra",
-                    "badge_text": "On offer",
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/12834502/2020/11/26/e50bd870-573d-4f6f-9ebc-938bda01edc31606382198225WomenBlackMultiColourPrintedKurti1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/12834502/2020/11/26/32c3c29c-5be7-4978-8e03-0851b2ed33601606382198380WomenBlackMultiColourPrintedKurti3.jpg"
-                },
-                {
-                    "id": "4w",
-                    "title": "METRO-FASHION",
-                    "price": "1599",
-                    "compare_at_price": "1799",
-                    "vendor": "Myntra",
-                    "badge_text": "New season",
-                    "image": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/19381372/2022/8/4/4dc24e8c-f86c-4a85-80a3-a4941c84453b1659612869086METRO-FASHIONWomenBhandhaniPrintedKurtaandPantSetPureCotton1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/19381372/2022/8/4/4dc24e8c-f86c-4a85-80a3-a4941c84453b1659612869086METRO-FASHIONWomenBhandhaniPrintedKurtaandPantSetPureCotton1.jpg"
-                }
-            ]
-        },
-        {
-            "category_name": "Kids",
-            "category_products": [
-                {
-                    "id": "1k",
-                    "title": "Chicco",
-                    "price": "1199",
-                    "compare_at_price": "1399",
-                    "vendor": "Myntra",
-                    "badge_text": "Wedding Special",
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14075186/2021/4/12/85af90ad-db0a-47ee-b26f-4b2168cc31ae1618209422880ChiccoBoysWhite1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14075186/2021/4/12/9a744074-86f3-4c0f-810b-2877e4bdf1701618209422918ChiccoBoysWhite3.jpg"
-                },
-                {
-                    "id": "2k",
-                    "title": "Girls White & Black Printed Sustainable Tracksuit",
-                    "price": "2199",
-                    "compare_at_price": "4299",
-                    "vendor": "Myntra",
-                    "badge_text": "New season",
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15597052/2021/9/25/1fe8ff1f-6c80-402e-ac72-cbdccb8f77371632552170304Chicco1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15597052/2021/9/25/fc288e63-8e9e-4f02-8e70-1a3b7452674f1632552170439Chicco2.jpg"
-                },
-                {
-                    "id": "3k",
-                    "title": "Custom t-shirt",
-                    "price": "1399",
-                    "compare_at_price": "1499",
-                    "vendor": "Myntra",
-                    "badge_text": "On offer",
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16951678/2022/1/27/167ed0a2-7936-4d1a-955b-dfff4e53f1281643289347488Tshirts1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16951678/2022/1/27/13822874-aa23-4eb6-ab6a-026021ea503a1643289347112Tshirts2.jpg"
-                },
-                {
-                    "id": "4k",
-                    "title": "Kids Tshirt",
-                    "price": "599",
-                    "compare_at_price": "799",
-                    "vendor": "Myntra",
-                    "badge_text": "New season",
-                    "image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16809172/2023/4/19/ebeec264-7dea-4f8c-88ed-1b9ccd6c6a301681901675455-mothercare-Infant-Girls-Pink--Blue-Printed-Cotton-Top-490168-1.jpg",
-                    "second_image": "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16809172/2023/4/19/ebeec264-7dea-4f8c-88ed-1b9ccd6c6a301681901675455-mothercare-Infant-Girls-Pink--Blue-Printed-Cotton-Top-490168-1.jpg"
-                }
-            ]
-        }
-    ]
-
-};
-// async function fetchProducts() {
-//     try {
-//       const response = await fetch('https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json');
-//       const data = await response.json();
-//       return data;
-//     } catch (error) {
-//       console.error('Error fetching products:', error);
-//       // Handle error appropriately, e.g., display an error message to the user
-//     return [];
-//     }
-//   }
-  
-  function createProductCard(product) {
-    const card = document.createElement('div');
-    card.classList.add('product-card');
-  
-    const image = document.createElement('img');
-    image.src = product.image; // Replace with actual image URL from API data
-  
-    const badge = document.createElement('span');
-    badge.classList.add('badge');
-    badge.textContent = product.badge; // Replace with actual badge text from API data
-  
-    const title = document.createElement('h3');
-    title.textContent = product.title; // Replace with actual title from API data
-  
-    const vendor = document.createElement('p');
-    vendor.textContent = `by ${product.vendor}`; // Replace with actual vendor from API data
-  
-    const price = document.createElement('span');
-    price.classList.add('price');
-    price.textContent = `$${product.price}`; // Replace with actual price from API data
-  
-    const compareAtPrice = document.createElement('span');
-    compareAtPrice.classList.add('compare-at-price');
-    compareAtPrice.textContent = `$${product.compare_at_price}`; // Replace with actual compare_at_price from API data
-  
-    const discount = document.createElement('span');
-    discount.classList.add('discount');
-    const discountPercentage = Math.round((product.compare_at_price - product.price) / product.compare_at_price * 100);
-    discount.textContent = `${discountPercentage}% off`;
-  
-    const addToCartButton = document.createElement('button');
-    addToCartButton.classList.add('add-to-cart');
-    addToCartButton.textContent = 'Add to Cart'; // Visual button, no functionality needed
-  
-    card.appendChild(image);
-    if (product.badge) card.appendChild(badge); // Append badge only if it exists
-    card.appendChild(title);
-    card.appendChild(vendor);
-    card.appendChild(price);
-    card.appendChild(compareAtPrice);
-    card.appendChild(discount);
-    card.appendChild(addToCartButton);
-    
-  
-    return card;
-  }
-  
-  function populateProductCards(products) {
-    const productCardsContainer = document.querySelector('.product-cards');
-    productCardsContainer.innerHTML = ''; // Clear existing content
-  
-    // products.forEach(product => {
-    //   const card = createProductCard(product);
-    //   productCardsContainer.appendChild(card);
-    // });
-    if (Array.isArray(products)) {
-        products.forEach(product => {
-          const card = createProductCard(product);
-          productCardsContainer.appendChild(card);
-        });
-      } else {
-        console.error('Unexpected data format in products:', products);
-        // Handle the case where products is not an array (optional)
+// Function to fetch data from the API
+async function fetchData(url) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
       }
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.log('Error fetching data:', error.message);
+      return null;
+    }
   }
   
-  function handleTabClick(event) {
-    event.preventDefault(); // Prevent default anchor tag behavior
+  // Function to render product cards
+  function renderProducts(products) {
+    const productCardsContainer = document.querySelector('.product-cards');
+    productCardsContainer.innerHTML = '';
+    products.forEach(product => {
+      const price = parseFloat(product.price) || 0;
+      const comparePrice = parseFloat(product.compare_at_price) || 0;
+      const priceText = `Rs ${price.toFixed(2)}`;
   
-    const clickedTab = event.currentTarget;
-    const category = clickedTab.textContent.toLowerCase();
+      let compareText = '';
+      if (comparePrice > 0 && comparePrice > price) {
+        compareText = `Rs ${price.toFixed(2)} <strike>${comparePrice.toFixed(2)}</strike> 50% Off`;
+      } else {
+        compareText = `${priceText}`;
+      }
   
-    // Remove active class from all tabs
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
+      const card = `
+      <div class="product-card">
+    <img src="${product.image}" alt="${product.title}" class="product-image">
+    <div class="product-info">
+      <div class="product-title-vendor">
+        <h3 class="product-title">${product.title}</h3>
+       
+        <p class="product-vendor">${product.vendor}</p>
+    
+
+      </div>
+      <div class="product-prices">
+        <p class="product-price"><strong>Rs ${price.toFixed(2)}</strong> <strike>Rs ${comparePrice.toFixed(2)}</strike> <span class="discount">50% Off</span></p>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+      ${product.badge_text ? `<span class="product-badge">${product.badge_text}</span>` : ''}
+    </div>
+  </div>
+      `;
+      productCardsContainer.innerHTML += card;
+    });
+  }
+
   
-    // Add active class to clicked tab
-    clickedTab.classList.add('active');
+  document.addEventListener("DOMContentLoaded", async function () {
+    // Fetch data from the API
+    const apiUrl = 'https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json';
+    const data = await fetchData(apiUrl);
   
-    // Filter products based on category (if applicable)
-    let filteredProducts = products;
-    if (category !== 'all') {
-      filteredProducts = products.filter(product => product.category === category);
+    // If data is null or categories array doesn't exist, show error
+    if (!data || !data.categories || !Array.isArray(data.categories)) {
+      console.log('Invalid API data format');
+      return;
     }
   
-    // Show only product cards belonging to the selected category
-    populateProductCards(filteredProducts);
-  }
+    // Function to render products based on the selected category
+    function renderProductsByCategory(category) {
+      // Find the category in the API data
+      const categoryData = data.categories.find(cat => cat.category_name.toLowerCase() === category.toLowerCase());
   
-//   async function main() {
-//     const products = await fetchProducts();
-//     populateProductCards(products);
+      // If category data is found, render the products
+      if (categoryData) {
+        renderProducts(categoryData.category_products);
+      } else {
+        const productCardsContainer = document.querySelector('.product-cards');
+        productCardsContainer.innerHTML = '<p>No products found</p>';
+      }
+    }
   
-//     const tabs = document.querySelectorAll('.tab');
-//     tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
-//   }
+    // Select the first tab by default and render its products
+    const defaultTab = document.querySelector('.tab');
+    defaultTab.classList.add('active');
+    renderProductsByCategory(defaultTab.getAttribute('data-category'));
   
-//   main();
+    // Event listener for tabs
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', async function () {
+        // Remove active class from all tabs
+        tabs.forEach(tab => {
+          tab.classList.remove('active');
+        });
   
-
+        // Add active class to the clicked tab
+        this.classList.add('active');
+  
+        // Get the category name
+        const category = this.getAttribute('data-category');
+  
+        // Render products based on the selected category
+        renderProductsByCategory(category);
+      });
+    });
+  });
   
