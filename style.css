@@ -160,6 +160,7 @@ h1 {
   position: absolute;
   top: 5px;
   left: 5px;
+  font-weight: bold; /* Added font-weight bold */
 }
 
 .add-to-cart {
