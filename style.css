@@ -15,8 +15,16 @@ body {
 }
 
 h1 {
-  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  background-color:white;
+  color:black;
+  padding: 10px;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for the heading */
 }
+
 
 .tabs {
   width: 100%;
