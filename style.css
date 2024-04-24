@@ -229,5 +229,17 @@ h1 {
 } */
 
 
+/* Make emojis grayscale */
+/* .tab.active::before,
+.tab::before {
+  content: attr(data-emoji);
+  display: inline-block;
+  filter: grayscale(100%);
+  margin-right: 5px;
+} */
 
-
+.tab span.emoji {
+  font-size: 20px;
+  filter: grayscale(100%);
+  margin-right: 5px;
+}
